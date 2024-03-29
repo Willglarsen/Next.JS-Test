@@ -1,4 +1,3 @@
-// services/authService.ts
 import axios from 'axios';
 
 const API_BASE_URL = 'https://dummyjson.com/auth';
@@ -10,7 +9,7 @@ export const login = async (username: string, password: string, expiresInMins = 
       password,
       expiresInMins,
     });
-    return response.data; // Assuming the API returns user data upon successful login
+    return response.data;
   } catch (error) {
     throw new Error('Failed to authenticate. Please check your credentials.');
   }
